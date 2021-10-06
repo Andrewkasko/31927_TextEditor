@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace _31927_TextEditor
 {
-    public partial class Form1 : Form
+    public partial class TextEditorScreen : Form
     {
-        public Form1()
+        public TextEditorScreen()
         {
             InitializeComponent();
         }
