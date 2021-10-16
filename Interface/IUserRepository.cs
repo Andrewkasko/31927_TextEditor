@@ -10,7 +10,7 @@ namespace _31927_TextEditor.Interface
     public interface IUserRepository
     {
         void CreateUser(UserModel userModel);
-        bool CheckPermission(UserModel userModel);
+        string CheckPermission(string userName, string password);
         UserModel GetUser(string ID);
         UserModel UpdateUser(UserModel userModel);
 
