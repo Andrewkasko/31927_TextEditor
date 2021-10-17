@@ -32,13 +32,13 @@ namespace _31927_TextEditor
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UsernameTxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.login = new System.Windows.Forms.Button();
             this.createAccount = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.PasswordTxtbox = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -70,13 +70,13 @@ namespace _31927_TextEditor
             this.label3.TabIndex = 2;
             this.label3.Text = "Please login or create account.";
             // 
-            // textBox1
+            // UsernameTxtbox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(389, 283);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 29);
-            this.textBox1.TabIndex = 3;
+            this.UsernameTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameTxtbox.Location = new System.Drawing.Point(389, 283);
+            this.UsernameTxtbox.Name = "UsernameTxtbox";
+            this.UsernameTxtbox.Size = new System.Drawing.Size(188, 29);
+            this.UsernameTxtbox.TabIndex = 3;
             // 
             // label4
             // 
@@ -129,14 +129,14 @@ namespace _31927_TextEditor
             this.button3.Text = "Exit";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // PasswordTxtbox
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.maskedTextBox1.Location = new System.Drawing.Point(628, 283);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(188, 29);
-            this.maskedTextBox1.TabIndex = 10;
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.PasswordTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.PasswordTxtbox.Location = new System.Drawing.Point(628, 283);
+            this.PasswordTxtbox.Name = "PasswordTxtbox";
+            this.PasswordTxtbox.Size = new System.Drawing.Size(188, 29);
+            this.PasswordTxtbox.TabIndex = 10;
+            this.PasswordTxtbox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // LoginScreen
             // 
@@ -144,13 +144,13 @@ namespace _31927_TextEditor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1234, 711);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.PasswordTxtbox);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.createAccount);
             this.Controls.Add(this.login);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.UsernameTxtbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -167,13 +167,13 @@ namespace _31927_TextEditor
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox UsernameTxtbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.Button createAccount;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox PasswordTxtbox;
     }
 }
 

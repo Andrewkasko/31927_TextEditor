@@ -1,4 +1,5 @@
 ﻿using _31927_TextEditor.Interface;
+using _31927_TextEditor.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,13 @@ namespace _31927_TextEditor
 {
     public partial class LoginScreen : Form
     {
-        
+
+        public UserRepository userRepository { get; set; }
 
         public LoginScreen()
         {
             InitializeComponent();
+            userRepository = new UserRepository();
 
         }
 
@@ -43,10 +46,15 @@ namespace _31927_TextEditor
 
         private void login_Click(object sender, EventArgs e)
         {
-            var textEditorScreen = new TextEditorScreen();
-
-            textEditorScreen.Show();
-            this.Hide();
+            if (userRepository.CheckPermission(UsernameTxtbox.Text, PasswordTxtbox.Text) != "")
+            {
+                var textEditorScreen = new TextEditorScreen();
+                textEditorScreen.Show();
+                this.Hide();
+            }
+            else {
+                MessageBox.Show("The credentials that were entered are incorrect!", "Incorrect Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void createAccount_Click(object sender, EventArgs e)
