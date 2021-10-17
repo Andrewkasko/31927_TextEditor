@@ -35,8 +35,8 @@ namespace _31927_TextEditor
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.login = new System.Windows.Forms.Button();
+            this.createAccount = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
@@ -100,23 +100,25 @@ namespace _31927_TextEditor
             this.label5.Text = "Password";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // button1
+            // login
             // 
-            this.button1.Location = new System.Drawing.Point(866, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
+            this.login.Location = new System.Drawing.Point(866, 280);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(141, 40);
+            this.login.TabIndex = 7;
+            this.login.Text = "Login";
+            this.login.UseVisualStyleBackColor = true;
+            this.login.Click += new System.EventHandler(this.login_Click);
             // 
-            // button2
+            // createAccount
             // 
-            this.button2.Location = new System.Drawing.Point(436, 507);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 40);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Create Account";
-            this.button2.UseVisualStyleBackColor = true;
+            this.createAccount.Location = new System.Drawing.Point(436, 507);
+            this.createAccount.Name = "createAccount";
+            this.createAccount.Size = new System.Drawing.Size(141, 40);
+            this.createAccount.TabIndex = 8;
+            this.createAccount.Text = "Create Account";
+            this.createAccount.UseVisualStyleBackColor = true;
+            this.createAccount.Click += new System.EventHandler(this.createAccount_Click);
             // 
             // button3
             // 
@@ -144,8 +146,8 @@ namespace _31927_TextEditor
             this.ClientSize = new System.Drawing.Size(1234, 711);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.createAccount);
+            this.Controls.Add(this.login);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
@@ -168,8 +170,8 @@ namespace _31927_TextEditor
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button login;
+        private System.Windows.Forms.Button createAccount;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }

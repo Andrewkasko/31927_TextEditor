@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _31927_TextEditor.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace _31927_TextEditor
 {
     public partial class LoginScreen : Form
     {
+        
+
         public LoginScreen()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,6 +39,21 @@ namespace _31927_TextEditor
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void login_Click(object sender, EventArgs e)
+        {
+            var textEditorScreen = new TextEditorScreen();
+
+            textEditorScreen.Show();
+            this.Hide();
+        }
+
+        private void createAccount_Click(object sender, EventArgs e)
+        {
+            var createUserScreen = new CreateUserScreen();
+            createUserScreen.Show();
+            this.Hide();
         }
     }
 }

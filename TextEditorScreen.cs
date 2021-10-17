@@ -21,5 +21,10 @@ namespace _31927_TextEditor
         {
 
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

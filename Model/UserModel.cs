@@ -13,7 +13,6 @@ namespace _31927_TextEditor.Model
         public string Permission { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime DOB { get; set; }
-
+        public string DOB { get; set; }
     }
 }

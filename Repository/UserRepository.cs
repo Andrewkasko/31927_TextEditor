@@ -11,8 +11,30 @@ namespace _31927_TextEditor.Repository
 {
     public class UserRepository : IUserRepository
     {
-        public void CreateUser(UserModel userModel) { 
+        public bool CreateUser(UserModel userModel) {
 
+            //if (GetUser(userModel.Username) != null) {
+            //    return false; //User with same username already exists
+            //}
+
+           string fileName = AppDomain.CurrentDomain.BaseDirectory + @"\Users\login.txt";
+
+
+            using (StreamWriter sw = new StreamWriter(fileName, true))
+            {
+                //Write passed model
+                sw.WriteLine("{0},{1},{2},{3},{4},{5}", userModel.Username, userModel.Password, userModel.Permission, userModel.FirstName, userModel.LastName, userModel.DOB);
+              
+                sw.Close();
+
+            }
+
+            return true;
+        }
+
+        public UserModel GetUser(string username)
+        {
+            return null;
         }
 
         public string CheckPermission(string username, string password) {
@@ -72,7 +94,7 @@ namespace _31927_TextEditor.Repository
 
                 while (line != null)
                 {
-                    tempCredentials = line.Split('|');
+                    tempCredentials = line.Split(',');
                     credentialsFromFile.Add((tempCredentials[0], tempCredentials[1]));
 
                     line = sr.ReadLine();
@@ -95,12 +117,6 @@ namespace _31927_TextEditor.Repository
                 }
             }
             return false;
-        }
-
-
-        public UserModel GetUser(string ID) {
-
-            return null;
         }
 
         public UserModel UpdateUser(UserModel userModel) {
