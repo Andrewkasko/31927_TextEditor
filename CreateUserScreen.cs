@@ -35,7 +35,7 @@ namespace _31927_TextEditor
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            if ((UsernameTxtbox.Text != "" && UsernameTxtbox.Text != null) &&
+                if ((UsernameTxtbox.Text != "" && UsernameTxtbox.Text != null) &&
                 (PasswordTxtbox.Text != "" && PasswordTxtbox.Text != null) &&
                 (FirstNameTxtbox.Text != "" && FirstNameTxtbox.Text != null) &&
                 (LastNameTxtbox.Text != "" && LastNameTxtbox.Text != null) &&

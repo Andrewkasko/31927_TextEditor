@@ -16,5 +16,18 @@ namespace _31927_TextEditor
         {
             InitializeComponent();
         }
+
+
+        private void AboutScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            var textEditorScreen = new TextEditorScreen();
+            textEditorScreen.Show();
+            this.Hide();
+        }
     }
 }

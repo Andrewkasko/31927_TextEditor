@@ -30,7 +30,7 @@ namespace _31927_TextEditor
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -44,15 +44,16 @@ namespace _31927_TextEditor
             this.label1.TabIndex = 2;
             this.label1.Text = "About";
             // 
-            // button1
+            // BackBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(474, 553);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 55);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Okay";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BackBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackBtn.Location = new System.Drawing.Point(81, 597);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(212, 55);
+            this.BackBtn.TabIndex = 3;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // label2
             // 
@@ -72,10 +73,11 @@ namespace _31927_TextEditor
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1234, 711);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.label1);
             this.Name = "AboutScreen";
-            this.Text = "About Screen";
+            this.Text = "Back";
+            this.Load += new System.EventHandler(this.AboutScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,7 +86,7 @@ namespace _31927_TextEditor
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.Label label2;
     }
 }
