@@ -56,5 +56,16 @@ namespace _31927_TextEditor
         private void toolStripPaste_Click(object sender, EventArgs e)
         {
         }
+
+        private void toolStripOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Open a Text File";
+            ofd.Filter = "*.RTF | All Files(*.*)";
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == DialogResult.OK) {
+                string fileName = ofd.FileName;
+            }
+        }
     }
 }
