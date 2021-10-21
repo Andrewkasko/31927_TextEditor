@@ -162,7 +162,7 @@ namespace _31927_TextEditor
             this.backBtn.Name = "backBtn";
             this.backBtn.Size = new System.Drawing.Size(168, 51);
             this.backBtn.TabIndex = 16;
-            this.backBtn.Text = "Back";
+            this.backBtn.Text = "Cancel";
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
@@ -172,7 +172,7 @@ namespace _31927_TextEditor
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(168, 51);
             this.RegisterBtn.TabIndex = 17;
-            this.RegisterBtn.Text = "Register";
+            this.RegisterBtn.Text = "Submit";
             this.RegisterBtn.UseVisualStyleBackColor = true;
             this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 

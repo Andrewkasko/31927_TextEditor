@@ -37,7 +37,7 @@ namespace _31927_TextEditor
             this.label5 = new System.Windows.Forms.Label();
             this.login = new System.Windows.Forms.Button();
             this.createAccount = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ExitApplicationBtn = new System.Windows.Forms.Button();
             this.PasswordTxtbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -116,18 +116,19 @@ namespace _31927_TextEditor
             this.createAccount.Name = "createAccount";
             this.createAccount.Size = new System.Drawing.Size(141, 40);
             this.createAccount.TabIndex = 8;
-            this.createAccount.Text = "Create Account";
+            this.createAccount.Text = "New User";
             this.createAccount.UseVisualStyleBackColor = true;
             this.createAccount.Click += new System.EventHandler(this.createAccount_Click);
             // 
-            // button3
+            // ExitApplicationBtn
             // 
-            this.button3.Location = new System.Drawing.Point(628, 507);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 40);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ExitApplicationBtn.Location = new System.Drawing.Point(628, 507);
+            this.ExitApplicationBtn.Name = "ExitApplicationBtn";
+            this.ExitApplicationBtn.Size = new System.Drawing.Size(141, 40);
+            this.ExitApplicationBtn.TabIndex = 9;
+            this.ExitApplicationBtn.Text = "Exit";
+            this.ExitApplicationBtn.UseVisualStyleBackColor = true;
+            this.ExitApplicationBtn.Click += new System.EventHandler(this.ExitApplicationBtn_Click);
             // 
             // PasswordTxtbox
             // 
@@ -145,7 +146,7 @@ namespace _31927_TextEditor
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1234, 711);
             this.Controls.Add(this.PasswordTxtbox);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.ExitApplicationBtn);
             this.Controls.Add(this.createAccount);
             this.Controls.Add(this.login);
             this.Controls.Add(this.label5);
@@ -172,7 +173,7 @@ namespace _31927_TextEditor
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.Button createAccount;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ExitApplicationBtn;
         private System.Windows.Forms.TextBox PasswordTxtbox;
     }
 }

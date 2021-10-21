@@ -12,9 +12,13 @@ namespace _31927_TextEditor
 {
     public partial class AboutScreen : Form
     {
-        public AboutScreen()
+        public bool Disable { get; set; }
+        public string Username { get; set; }
+        public AboutScreen(bool disable, string username)
         {
             InitializeComponent();
+            Disable = disable;
+            Username = username;
         }
 
 
@@ -25,7 +29,7 @@ namespace _31927_TextEditor
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            var textEditorScreen = new TextEditorScreen();
+            var textEditorScreen = new TextEditorScreen(Disable, Username);
             textEditorScreen.Show();
             this.Hide();
         }

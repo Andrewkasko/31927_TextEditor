@@ -46,9 +46,19 @@ namespace _31927_TextEditor
 
         private void login_Click(object sender, EventArgs e)
         {
-            if (userRepository.CheckPermission(UsernameTxtbox.Text, PasswordTxtbox.Text) != "")
+            string permission= userRepository.CheckPermission(UsernameTxtbox.Text, PasswordTxtbox.Text);
+            bool disable;
+            if (permission != "")
             {
-                var textEditorScreen = new TextEditorScreen();
+                if (permission == "Edit")
+                {
+                    disable = false;
+                }
+                else 
+                {
+                    disable = true;
+                }
+                var textEditorScreen = new TextEditorScreen(disable, UsernameTxtbox.Text);
                 textEditorScreen.Show();
                 this.Hide();
             }
@@ -62,6 +72,11 @@ namespace _31927_TextEditor
             var createUserScreen = new CreateUserScreen();
             createUserScreen.Show();
             this.Hide();
+        }
+
+        private void ExitApplicationBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -13,11 +13,12 @@ namespace _31927_TextEditor.Repository
     {
         public bool CreateUser(UserModel userModel) {
 
-            //if (GetUser(userModel.Username) != null) {
-            //    return false; //User with same username already exists
-            //}
+            if (GetUser(userModel.Username) != null)
+            {
+                return false; //User with same username already exists
+            }
 
-           string fileName = AppDomain.CurrentDomain.BaseDirectory + @"\Users\login.txt";
+            string fileName = AppDomain.CurrentDomain.BaseDirectory + @"\Users\login.txt";
 
 
             using (StreamWriter sw = new StreamWriter(fileName, true))
@@ -34,7 +35,40 @@ namespace _31927_TextEditor.Repository
 
         public UserModel GetUser(string username)
         {
-            return null;
+            UserModel userModel = new UserModel();
+            string line;
+            string[] tempCredentials;
+            try
+            {
+                //Pass the file path and file name to the StreamReader constructor
+                StreamReader sr = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + @"\Users\login.txt"); // Make dynamic
+                //Read the first line of text
+                line = sr.ReadLine();
+
+                while (line != null)
+                {
+                    tempCredentials = line.Split(',');
+                    if (tempCredentials[0] == username) {
+                        userModel.Username = tempCredentials[0];
+                        userModel.Password = tempCredentials[1];
+                        userModel.Permission = tempCredentials[2];
+                        userModel.FirstName = tempCredentials[3];
+                        userModel.LastName = tempCredentials[4];
+                        userModel.DOB = tempCredentials[5];
+                    }
+                    line = sr.ReadLine();
+                }
+                //close the file
+                sr.Close();
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+
+            return (userModel.Username == "" || userModel.Username == null) ? null : userModel;
+            
         }
 
         public string CheckPermission(string username, string password) {
