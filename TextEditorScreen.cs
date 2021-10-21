@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -99,6 +100,54 @@ namespace _31927_TextEditor
         private void textArea_TextChanged(object sender, EventArgs e)
         {
             //textArea.Font = 20;
+        }
+
+        public void LoadFile() {
+                // Create an OpenFileDialog to request a file to open.
+                OpenFileDialog openFile1 = new OpenFileDialog();
+
+                // Initialize the OpenFileDialog to look for RTF files.
+                openFile1.DefaultExt = "*.rtf";
+                openFile1.Filter = "RTF Files|*.rtf";
+
+                // Determine whether the user selected a file from the OpenFileDialog.
+                if (openFile1.ShowDialog() == System.Windows.Forms.DialogResult.OK &&
+                   openFile1.FileName.Length > 0)
+                {
+                // Load the contents of the file into the RichTextBox.
+                try
+                {
+                    textArea.LoadFile(openFile1.FileName, RichTextBoxStreamType.RichText);
+                }
+                catch (Exception obj) {
+                    MessageBox.Show(obj.ToString(), "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            
+
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            SaveFileDialog saveFile1 = new SaveFileDialog();
+
+            // Initialize the SaveFileDialog to specify the RTF extension for the file.
+            saveFile1.DefaultExt = "*.rtf";
+            saveFile1.Filter = "RTF Files|*.rtf";
+
+            // Determine if the user selected a file name from the saveFileDialog.
+            if (saveFile1.ShowDialog() == System.Windows.Forms.DialogResult.OK &&
+               saveFile1.FileName.Length > 0)
+            {
+                // Save the contents of the RichTextBox into the file.
+                textArea.SaveFile(saveFile1.FileName, RichTextBoxStreamType.RichText);
+            }
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadFile();
         }
     }
 }
