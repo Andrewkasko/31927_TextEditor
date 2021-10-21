@@ -15,6 +15,7 @@ namespace _31927_TextEditor
         public TextEditorScreen()
         {
             InitializeComponent();
+            
         }
 
         private void toolStripButton8_Click(object sender, EventArgs e)
@@ -24,10 +25,7 @@ namespace _31927_TextEditor
             this.Hide();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void LogoutBtn_Click(object sender, EventArgs e)
         {
@@ -45,12 +43,12 @@ namespace _31927_TextEditor
 
         private void toolStripCopy_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(richTextBox.SelectedText);
+            Clipboard.SetText(textArea.SelectedText);
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(richTextBox.SelectedText);
+            Clipboard.SetText(textArea.SelectedText);
         }
 
         private void toolStripPaste_Click(object sender, EventArgs e)
@@ -66,6 +64,41 @@ namespace _31927_TextEditor
             if (dr == DialogResult.OK) {
                 string fileName = ofd.FileName;
             }
+        }
+
+        private void toolStripLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changeFont_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = new FontDialog();
+
+            DialogResult dr = fontDialog.ShowDialog();
+
+            if (dr == DialogResult.OK) {
+
+                string fontName;
+                FontStyle fontStyle;
+                float fontSize;
+
+                //textArea.Font.Style = fontDialog.Font.Name;
+
+                fontName = fontDialog.Font.Name;
+                fontStyle = fontDialog.Font.Style;
+                fontSize = fontDialog.Font.Size;
+
+                MessageBox.Show("Fontname: " + fontName + "\nFontStyle: " + fontStyle.ToString() + "\nFont Size: " + fontSize.ToString());
+
+                textArea.SelectionFont = new Font(fontDialog.Font.Name, fontDialog.Font.Size, fontDialog.Font.Style);
+            }
+
+        }
+
+        private void textArea_TextChanged(object sender, EventArgs e)
+        {
+            //textArea.Font = 20;
         }
     }
 }

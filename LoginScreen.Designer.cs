@@ -38,7 +38,7 @@ namespace _31927_TextEditor
             this.login = new System.Windows.Forms.Button();
             this.createAccount = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.PasswordTxtbox = new System.Windows.Forms.MaskedTextBox();
+            this.PasswordTxtbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -134,9 +134,9 @@ namespace _31927_TextEditor
             this.PasswordTxtbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.PasswordTxtbox.Location = new System.Drawing.Point(628, 283);
             this.PasswordTxtbox.Name = "PasswordTxtbox";
-            this.PasswordTxtbox.Size = new System.Drawing.Size(188, 29);
-            this.PasswordTxtbox.TabIndex = 10;
-            this.PasswordTxtbox.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.PasswordTxtbox.Size = new System.Drawing.Size(192, 29);
+            this.PasswordTxtbox.TabIndex = 11;
+            this.PasswordTxtbox.UseSystemPasswordChar = true;
             // 
             // LoginScreen
             // 
@@ -173,7 +173,7 @@ namespace _31927_TextEditor
         private System.Windows.Forms.Button login;
         private System.Windows.Forms.Button createAccount;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.MaskedTextBox PasswordTxtbox;
+        private System.Windows.Forms.TextBox PasswordTxtbox;
     }
 }
 
