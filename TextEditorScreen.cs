@@ -15,6 +15,12 @@ namespace _31927_TextEditor
     {
         public bool Disable { get; set; }
         public string Username { get; set; }
+        public bool Bold { get; set; }
+        public bool Italic { get; set; }
+        public bool Underline { get; set; }
+        public int FontSize { get; set; }
+
+
         public TextEditorScreen(bool disable, string username)
         {
             Disable = disable;
@@ -27,6 +33,11 @@ namespace _31927_TextEditor
 
         private void InitialSetup() {
             UserNameLabel.Text = UserNameLabel.Text + Username;
+            Bold = false;
+            Italic = false;
+            Underline = false;
+            FontSize = 12;
+            textArea.SelectionFont = new Font(textArea.SelectionFont.ToString(), 12, textArea.SelectionFont.Style);
         }
 
         private void DisableControls() {
@@ -327,7 +338,55 @@ namespace _31927_TextEditor
 
         private void toolStripBold_Click(object sender, EventArgs e)
         {
+            if (Bold == false)
+            {
+                Bold = true;
+                toolStripBold.Checked = true;
+                textArea.SelectionFont = new Font(textArea.SelectionFont, FontStyle.Bold);
+            }
+            else {
+                Bold = false;
+                toolStripBold.Checked = false;
+                textArea.SelectionFont = new Font(textArea.SelectionFont, FontStyle.Regular);
+            }
+        }
 
+        private void toolStripItalic_Click(object sender, EventArgs e)
+        {
+            if (Italic == false)
+            {
+                Italic = true;
+                toolStripItalic.Checked = true;
+                textArea.SelectionFont = new Font(textArea.SelectionFont, FontStyle.Italic);
+            }
+            else
+            {
+                Italic = false;
+                toolStripItalic.Checked = false;
+                textArea.SelectionFont = new Font(textArea.SelectionFont, FontStyle.Regular);
+            }
+        }
+
+        private void toolStripUnderline_Click(object sender, EventArgs e)
+        {
+            if (Underline == false)
+            {
+                Underline = true;
+                toolStripUnderline.Checked = true;
+                textArea.SelectionFont = new Font(textArea.SelectionFont, FontStyle.Underline);
+            }
+            else
+            {
+                Underline = false;
+                toolStripUnderline.Checked = false;
+                textArea.SelectionFont = new Font(textArea.SelectionFont, FontStyle.Regular);
+            }
+        }
+
+        private void toolStripFontComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int fontSize = Int32.Parse(toolStripFontComboBox.Text);
+            textArea.SelectionFont = new Font(textArea.SelectionFont.ToString(), fontSize, textArea.SelectionFont.Style);
         }
     }
 }
