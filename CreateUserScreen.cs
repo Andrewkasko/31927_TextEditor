@@ -40,7 +40,8 @@ namespace _31927_TextEditor
                 (FirstNameTxtbox.Text != "" && FirstNameTxtbox.Text != null) &&
                 (LastNameTxtbox.Text != "" && LastNameTxtbox.Text != null) &&
                 (UserTypeList.Text != "" && UserTypeList.Text != null) &&
-                (DOBDatePicker.Text != "" && DOBDatePicker.Text != null))
+                (DOBDatePicker.Text != "" && DOBDatePicker.Text != null) &&
+                (PasswordTxtbox.Text == ConfirmPasswordTxtbox.Text))
             {
                 var newUser = new UserModel();
                 newUser.Username = UsernameTxtbox.Text;
@@ -64,7 +65,7 @@ namespace _31927_TextEditor
             }
             else {
 
-                MessageBox.Show("Please fill in all fields", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill in all fields, and make sure the Password and Confirm Password match!", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

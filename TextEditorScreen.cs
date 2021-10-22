@@ -19,6 +19,7 @@ namespace _31927_TextEditor
         public bool Italic { get; set; }
         public bool Underline { get; set; }
         public int FontSize { get; set; }
+        public string CurrentFilePath { get; set; }
 
 
         public TextEditorScreen(bool disable, string username)
@@ -151,6 +152,7 @@ namespace _31927_TextEditor
                 try
                 {
                     textArea.LoadFile(openFile1.FileName, RichTextBoxStreamType.RichText);
+                    CurrentFilePath = openFile1.FileName;
                     MessageBox.Show("The File has loaded successfully", "Loaded", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -174,6 +176,7 @@ namespace _31927_TextEditor
         public void NewDocument() {
 
             if (textArea.Text == "" || textArea.Text == null) {
+                CurrentFilePath = null;
                 MessageBox.Show("New Document Created!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -183,6 +186,8 @@ namespace _31927_TextEditor
                 {
                     //do something
                     textArea.Text = "";
+                    CurrentFilePath = null;
+                    MessageBox.Show("New Document Created!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
@@ -306,6 +311,19 @@ namespace _31927_TextEditor
             }
         }
 
+        private void SaveFile() {
+
+            if (CurrentFilePath == "" || CurrentFilePath == null)
+            {
+                SaveAsRTF();
+            }
+            else {
+                textArea.SaveFile(CurrentFilePath, RichTextBoxStreamType.RichText);
+                MessageBox.Show("File saved successfully!", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        
+        }
+
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DisplayAboutScreen();
@@ -323,17 +341,17 @@ namespace _31927_TextEditor
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            SaveFile();
         }
 
         private void toolStripSave_Click(object sender, EventArgs e)
         {
-
+            SaveFile();
         }
 
         private void toolStripSaveAs_Click(object sender, EventArgs e)
         {
-
+            SaveAsRTF();
         }
 
         private void toolStripBold_Click(object sender, EventArgs e)

@@ -45,6 +45,8 @@ namespace _31927_TextEditor
             this.backBtn = new System.Windows.Forms.Button();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.UserTypeList = new System.Windows.Forms.ComboBox();
+            this.ConfirmPasswordTxtbox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +55,7 @@ namespace _31927_TextEditor
             this.label1.Font = new System.Drawing.Font("Arial", 38F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(399, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(466, 60);
+            this.label1.Size = new System.Drawing.Size(701, 88);
             this.label1.TabIndex = 1;
             this.label1.Text = "Create an Account";
             // 
@@ -63,7 +65,7 @@ namespace _31927_TextEditor
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(521, 166);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 20);
+            this.label3.Size = new System.Drawing.Size(310, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Please fill in all fields below";
             // 
@@ -101,7 +103,7 @@ namespace _31927_TextEditor
             // 
             // FirstNameTxtbox
             // 
-            this.FirstNameTxtbox.Location = new System.Drawing.Point(409, 334);
+            this.FirstNameTxtbox.Location = new System.Drawing.Point(409, 391);
             this.FirstNameTxtbox.Name = "FirstNameTxtbox";
             this.FirstNameTxtbox.Size = new System.Drawing.Size(150, 20);
             this.FirstNameTxtbox.TabIndex = 9;
@@ -109,7 +111,7 @@ namespace _31927_TextEditor
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(452, 318);
+            this.label5.Location = new System.Drawing.Point(452, 375);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 8;
@@ -117,7 +119,7 @@ namespace _31927_TextEditor
             // 
             // LastNameTxtbox
             // 
-            this.LastNameTxtbox.Location = new System.Drawing.Point(607, 334);
+            this.LastNameTxtbox.Location = new System.Drawing.Point(607, 391);
             this.LastNameTxtbox.Name = "LastNameTxtbox";
             this.LastNameTxtbox.Size = new System.Drawing.Size(150, 20);
             this.LastNameTxtbox.TabIndex = 11;
@@ -125,7 +127,7 @@ namespace _31927_TextEditor
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(653, 318);
+            this.label6.Location = new System.Drawing.Point(653, 375);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 13);
             this.label6.TabIndex = 10;
@@ -133,7 +135,9 @@ namespace _31927_TextEditor
             // 
             // DOBDatePicker
             // 
-            this.DOBDatePicker.Location = new System.Drawing.Point(607, 404);
+            this.DOBDatePicker.CustomFormat = "dd-MM-yyyy";
+            this.DOBDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DOBDatePicker.Location = new System.Drawing.Point(607, 461);
             this.DOBDatePicker.Name = "DOBDatePicker";
             this.DOBDatePicker.Size = new System.Drawing.Size(200, 20);
             this.DOBDatePicker.TabIndex = 13;
@@ -141,7 +145,7 @@ namespace _31927_TextEditor
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(452, 378);
+            this.label7.Location = new System.Drawing.Point(452, 435);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 13);
             this.label7.TabIndex = 14;
@@ -150,7 +154,7 @@ namespace _31927_TextEditor
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(663, 378);
+            this.label8.Location = new System.Drawing.Point(663, 435);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 15;
@@ -182,10 +186,26 @@ namespace _31927_TextEditor
             this.UserTypeList.Items.AddRange(new object[] {
             "View",
             "Edit"});
-            this.UserTypeList.Location = new System.Drawing.Point(409, 407);
+            this.UserTypeList.Location = new System.Drawing.Point(409, 464);
             this.UserTypeList.Name = "UserTypeList";
             this.UserTypeList.Size = new System.Drawing.Size(150, 21);
             this.UserTypeList.TabIndex = 20;
+            // 
+            // ConfirmPasswordTxtbox
+            // 
+            this.ConfirmPasswordTxtbox.Location = new System.Drawing.Point(607, 323);
+            this.ConfirmPasswordTxtbox.Name = "ConfirmPasswordTxtbox";
+            this.ConfirmPasswordTxtbox.Size = new System.Drawing.Size(150, 20);
+            this.ConfirmPasswordTxtbox.TabIndex = 21;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(639, 307);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Confirm Password";
             // 
             // CreateUserScreen
             // 
@@ -193,6 +213,8 @@ namespace _31927_TextEditor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1234, 711);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.ConfirmPasswordTxtbox);
             this.Controls.Add(this.UserTypeList);
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.backBtn);
@@ -234,5 +256,7 @@ namespace _31927_TextEditor
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.ComboBox UserTypeList;
+        private System.Windows.Forms.TextBox ConfirmPasswordTxtbox;
+        private System.Windows.Forms.Label label9;
     }
 }
