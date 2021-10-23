@@ -16,6 +16,9 @@ namespace _31927_TextEditor
     {
 
         public UserRepository userRepository { get; set; }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
 
         public LoginScreen()
         {
@@ -23,30 +26,14 @@ namespace _31927_TextEditor
             userRepository = new UserRepository();
 
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
         private void login_Click(object sender, EventArgs e)
         {
-            string permission= userRepository.CheckPermission(UsernameTxtbox.Text, PasswordTxtbox.Text);
+            UserLogin();
+        }
+
+        public void UserLogin()
+        {
+            string permission = userRepository.CheckPermission(UsernameTxtbox.Text, PasswordTxtbox.Text);
             bool disable;
             if (permission != "")
             {
@@ -54,7 +41,7 @@ namespace _31927_TextEditor
                 {
                     disable = false;
                 }
-                else 
+                else
                 {
                     disable = true;
                 }
@@ -62,7 +49,8 @@ namespace _31927_TextEditor
                 textEditorScreen.Show();
                 this.Hide();
             }
-            else {
+            else
+            {
                 MessageBox.Show("The credentials that were entered are incorrect!", "Incorrect Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

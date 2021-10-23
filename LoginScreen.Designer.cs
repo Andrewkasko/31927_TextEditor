@@ -87,7 +87,6 @@ namespace _31927_TextEditor
             this.label4.Size = new System.Drawing.Size(73, 17);
             this.label4.TabIndex = 5;
             this.label4.Text = "Username";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -98,7 +97,6 @@ namespace _31927_TextEditor
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "Password";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // login
             // 

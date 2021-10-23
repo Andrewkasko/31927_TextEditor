@@ -21,13 +21,17 @@ namespace _31927_TextEditor
             Username = username;
         }
 
-
         private void AboutScreen_Load(object sender, EventArgs e)
         {
 
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
+        {
+            Back();
+        }
+
+        public void Back()
         {
             var textEditorScreen = new TextEditorScreen(Disable, Username);
             textEditorScreen.Show();

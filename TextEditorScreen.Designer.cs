@@ -70,7 +70,6 @@ namespace _31927_TextEditor
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -79,7 +78,7 @@ namespace _31927_TextEditor
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1234, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1234, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,7 +91,7 @@ namespace _31927_TextEditor
             this.saveAsToolStripMenuItem,
             this.logoutToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 34);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -101,7 +100,7 @@ namespace _31927_TextEditor
             this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(285, 34);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
@@ -110,7 +109,7 @@ namespace _31927_TextEditor
             this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(285, 34);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.ToolTipText = "Open Document";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
@@ -120,7 +119,7 @@ namespace _31927_TextEditor
             this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(285, 34);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -130,7 +129,7 @@ namespace _31927_TextEditor
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(285, 34);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
@@ -139,7 +138,7 @@ namespace _31927_TextEditor
             this.logoutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("logoutToolStripMenuItem.Image")));
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete)));
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(285, 34);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -150,7 +149,7 @@ namespace _31927_TextEditor
             this.copyToolStripMenuItem,
             this.pasteToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 34);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -159,7 +158,7 @@ namespace _31927_TextEditor
             this.cutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripMenuItem.Image")));
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.cutToolStripMenuItem.Text = "Cut";
             this.cutToolStripMenuItem.ToolTipText = "Cut";
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
@@ -170,7 +169,7 @@ namespace _31927_TextEditor
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(270, 30);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -179,7 +178,7 @@ namespace _31927_TextEditor
             this.pasteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripMenuItem.Image")));
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.pasteToolStripMenuItem.Text = "Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
@@ -188,14 +187,14 @@ namespace _31927_TextEditor
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 34);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -211,15 +210,15 @@ namespace _31927_TextEditor
             this.toolStripBold,
             this.toolStripItalic,
             this.toolStripUnderline,
-            this.ChangeFont,
             this.toolStripSeparator2,
             this.toolStripFontComboBox,
+            this.ChangeFont,
             this.AboutBtn,
             this.toolStripSeparator3,
             this.UserNameLabel});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 36);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1234, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(1234, 33);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -229,7 +228,7 @@ namespace _31927_TextEditor
             this.toolStripNewDoc.Image = ((System.Drawing.Image)(resources.GetObject("toolStripNewDoc.Image")));
             this.toolStripNewDoc.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripNewDoc.Name = "toolStripNewDoc";
-            this.toolStripNewDoc.Size = new System.Drawing.Size(34, 33);
+            this.toolStripNewDoc.Size = new System.Drawing.Size(28, 30);
             this.toolStripNewDoc.Text = "toolStripNewDoc";
             this.toolStripNewDoc.ToolTipText = "New Document";
             this.toolStripNewDoc.Click += new System.EventHandler(this.toolStripNewDoc_Click);
@@ -240,7 +239,7 @@ namespace _31927_TextEditor
             this.toolStripOpen.Image = ((System.Drawing.Image)(resources.GetObject("toolStripOpen.Image")));
             this.toolStripOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripOpen.Name = "toolStripOpen";
-            this.toolStripOpen.Size = new System.Drawing.Size(34, 33);
+            this.toolStripOpen.Size = new System.Drawing.Size(28, 30);
             this.toolStripOpen.Text = "toolStripButton2";
             this.toolStripOpen.ToolTipText = "Open Document";
             this.toolStripOpen.Click += new System.EventHandler(this.toolStripOpen_Click);
@@ -251,7 +250,7 @@ namespace _31927_TextEditor
             this.toolStripSave.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSave.Image")));
             this.toolStripSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSave.Name = "toolStripSave";
-            this.toolStripSave.Size = new System.Drawing.Size(34, 33);
+            this.toolStripSave.Size = new System.Drawing.Size(28, 30);
             this.toolStripSave.Text = "toolStripSave";
             this.toolStripSave.ToolTipText = "Save Document";
             this.toolStripSave.Click += new System.EventHandler(this.toolStripSave_Click);
@@ -262,7 +261,7 @@ namespace _31927_TextEditor
             this.toolStripSaveAs.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSaveAs.Image")));
             this.toolStripSaveAs.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSaveAs.Name = "toolStripSaveAs";
-            this.toolStripSaveAs.Size = new System.Drawing.Size(34, 33);
+            this.toolStripSaveAs.Size = new System.Drawing.Size(28, 30);
             this.toolStripSaveAs.Text = "toolStripSaveAs";
             this.toolStripSaveAs.ToolTipText = "Save As Document";
             this.toolStripSaveAs.Click += new System.EventHandler(this.toolStripSaveAs_Click);
@@ -270,7 +269,7 @@ namespace _31927_TextEditor
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // toolStripBold
             // 
@@ -278,7 +277,7 @@ namespace _31927_TextEditor
             this.toolStripBold.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBold.Image")));
             this.toolStripBold.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBold.Name = "toolStripBold";
-            this.toolStripBold.Size = new System.Drawing.Size(34, 33);
+            this.toolStripBold.Size = new System.Drawing.Size(28, 30);
             this.toolStripBold.Text = "toolStripBold";
             this.toolStripBold.ToolTipText = "Bold";
             this.toolStripBold.Click += new System.EventHandler(this.toolStripBold_Click);
@@ -290,7 +289,7 @@ namespace _31927_TextEditor
             this.toolStripItalic.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripItalic.Name = "toolStripItalic";
             this.toolStripItalic.Padding = new System.Windows.Forms.Padding(1);
-            this.toolStripItalic.Size = new System.Drawing.Size(34, 33);
+            this.toolStripItalic.Size = new System.Drawing.Size(30, 30);
             this.toolStripItalic.Text = "toolStripItalic";
             this.toolStripItalic.ToolTipText = "Italic";
             this.toolStripItalic.Click += new System.EventHandler(this.toolStripItalic_Click);
@@ -302,7 +301,7 @@ namespace _31927_TextEditor
             this.toolStripUnderline.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripUnderline.Name = "toolStripUnderline";
             this.toolStripUnderline.Padding = new System.Windows.Forms.Padding(1);
-            this.toolStripUnderline.Size = new System.Drawing.Size(34, 33);
+            this.toolStripUnderline.Size = new System.Drawing.Size(30, 30);
             this.toolStripUnderline.Text = "toolStripUnderline";
             this.toolStripUnderline.ToolTipText = "Underline";
             this.toolStripUnderline.Click += new System.EventHandler(this.toolStripUnderline_Click);
@@ -313,14 +312,14 @@ namespace _31927_TextEditor
             this.ChangeFont.Image = ((System.Drawing.Image)(resources.GetObject("ChangeFont.Image")));
             this.ChangeFont.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ChangeFont.Name = "ChangeFont";
-            this.ChangeFont.Size = new System.Drawing.Size(34, 33);
+            this.ChangeFont.Size = new System.Drawing.Size(28, 30);
             this.ChangeFont.Text = "ChangeFont";
             this.ChangeFont.Click += new System.EventHandler(this.ChangeFont_Click_1);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 33);
             // 
             // toolStripFontComboBox
             // 
@@ -340,7 +339,7 @@ namespace _31927_TextEditor
             "19",
             "20"});
             this.toolStripFontComboBox.Name = "toolStripFontComboBox";
-            this.toolStripFontComboBox.Size = new System.Drawing.Size(140, 38);
+            this.toolStripFontComboBox.Size = new System.Drawing.Size(140, 33);
             this.toolStripFontComboBox.ToolTipText = "Font";
             this.toolStripFontComboBox.SelectedIndexChanged += new System.EventHandler(this.toolStripFontComboBox_SelectedIndexChanged);
             // 
@@ -350,7 +349,7 @@ namespace _31927_TextEditor
             this.AboutBtn.Image = ((System.Drawing.Image)(resources.GetObject("AboutBtn.Image")));
             this.AboutBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AboutBtn.Name = "AboutBtn";
-            this.AboutBtn.Size = new System.Drawing.Size(34, 33);
+            this.AboutBtn.Size = new System.Drawing.Size(28, 30);
             this.AboutBtn.Text = "AboutBtn";
             this.AboutBtn.ToolTipText = "About";
             this.AboutBtn.Click += new System.EventHandler(this.toolStripButton8_Click);
@@ -358,12 +357,12 @@ namespace _31927_TextEditor
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 38);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 33);
             // 
             // UserNameLabel
             // 
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(108, 33);
+            this.UserNameLabel.Size = new System.Drawing.Size(71, 30);
             this.UserNameLabel.Text = "User Name: ";
             // 
             // toolStrip2
@@ -374,9 +373,9 @@ namespace _31927_TextEditor
             this.toolStripButtonCutBtn,
             this.toolStripCopy,
             this.toolStripPaste});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 74);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 57);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(36, 616);
+            this.toolStrip2.Size = new System.Drawing.Size(29, 633);
             this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -386,7 +385,7 @@ namespace _31927_TextEditor
             this.toolStripButtonCutBtn.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCutBtn.Image")));
             this.toolStripButtonCutBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonCutBtn.Name = "toolStripButtonCutBtn";
-            this.toolStripButtonCutBtn.Size = new System.Drawing.Size(31, 28);
+            this.toolStripButtonCutBtn.Size = new System.Drawing.Size(26, 28);
             this.toolStripButtonCutBtn.Text = "toolStripButtonCutBtn";
             this.toolStripButtonCutBtn.ToolTipText = "Cut";
             this.toolStripButtonCutBtn.Click += new System.EventHandler(this.toolStripButtonCutBtn_Click);
@@ -397,7 +396,7 @@ namespace _31927_TextEditor
             this.toolStripCopy.Image = ((System.Drawing.Image)(resources.GetObject("toolStripCopy.Image")));
             this.toolStripCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripCopy.Name = "toolStripCopy";
-            this.toolStripCopy.Size = new System.Drawing.Size(31, 28);
+            this.toolStripCopy.Size = new System.Drawing.Size(26, 28);
             this.toolStripCopy.Text = "toolStripCopy";
             this.toolStripCopy.ToolTipText = "Copy";
             this.toolStripCopy.Click += new System.EventHandler(this.toolStripCopy_Click);
@@ -408,7 +407,7 @@ namespace _31927_TextEditor
             this.toolStripPaste.Image = ((System.Drawing.Image)(resources.GetObject("toolStripPaste.Image")));
             this.toolStripPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripPaste.Name = "toolStripPaste";
-            this.toolStripPaste.Size = new System.Drawing.Size(31, 28);
+            this.toolStripPaste.Size = new System.Drawing.Size(26, 28);
             this.toolStripPaste.Text = "Paste";
             this.toolStripPaste.ToolTipText = "Paste";
             this.toolStripPaste.Click += new System.EventHandler(this.toolStripPaste_Click);
